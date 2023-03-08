@@ -118,6 +118,7 @@ colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&qu
 id="mUxJb4hxvpHQ" outputId="8420b121-1341-45cf-a708-4bdaa2111897">
 
 ``` python
+  {"tags":["hide-input",]}
 ## load dataset from github
 
 import pandas as pd
