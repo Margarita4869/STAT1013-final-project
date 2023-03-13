@@ -72,21 +72,7 @@ id="UNL0WXav3hLj" outputId="bf4784d9-ca7c-4e26-c27b-cd9adde51782">
 ``` python
 ## First 5 records of G1 (student)
 df= pd.read_csv('https://raw.githubusercontent.com/prasertcbs/basic-dataset/master/Starbucks%20satisfactory%20survey%20encode%20cleaned.csv')
-A=df['membershipCard']=='1'
-B=df['status']=='0'
-df[(A)&(B)].head(5)
-```
-
-<div class="output execute_result" execution_count="9">
-
-    Empty DataFrame
-    Columns: [Id, gender, age, status, income, visitNo, method, timeSpend, location, membershipCard, itemPurchaseCoffee, itempurchaseCold, itemPurchasePastries, itemPurchaseJuices, itemPurchaseSandwiches, itemPurchaseOthers, spendPurchase, productRate, priceRate, promoRate, ambianceRate, wifiRate, serviceRate, chooseRate, promoMethodApp, promoMethodSoc, promoMethodEmail, promoMethodDeal, promoMethodFriend, promoMethodDisplay, promoMethodBillboard, promoMethodOthers, loyal]
-    Index: []
-
-    [0 rows x 33 columns]
-
-</div>
-
+df[(df['status']==0) & (df['membershipCard']==1)].head(5)
 </div>
 
 <div class="cell code" execution_count="7"
@@ -95,20 +81,7 @@ id="dhe52HVB4T1O" outputId="740c1d2d-1a73-4578-d27b-289cf47ec0a6">
 
 ``` python
 ## First 5 records of G2 (employed)
-A=df['membershipCard']=='1'
-C=df['status']=='2'
-df[(A)&(C)].head(5)
-```
-
-<div class="output execute_result" execution_count="7">
-
-    Empty DataFrame
-    Columns: [Id, gender, age, status, income, visitNo, method, timeSpend, location, membershipCard, itemPurchaseCoffee, itempurchaseCold, itemPurchasePastries, itemPurchaseJuices, itemPurchaseSandwiches, itemPurchaseOthers, spendPurchase, productRate, priceRate, promoRate, ambianceRate, wifiRate, serviceRate, chooseRate, promoMethodApp, promoMethodSoc, promoMethodEmail, promoMethodDeal, promoMethodFriend, promoMethodDisplay, promoMethodBillboard, promoMethodOthers, loyal]
-    Index: []
-
-    [0 rows x 33 columns]
-
-</div>
+df[(df['status']==2) & (df['membershipCard']==1)].head(5)
 
 </div>
 
@@ -119,7 +92,6 @@ df[(A)&(C)].head(5)
 
 ## Open question, be flexible and no example can be provided.
 ```
-
 </div>
 
 <div class="cell code"
