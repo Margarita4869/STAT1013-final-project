@@ -65,27 +65,99 @@ df.head(5)
 
 </div>
 
-<div class="cell code" execution_count="9"
-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:143}"
-id="UNL0WXav3hLj" outputId="bf4784d9-ca7c-4e26-c27b-cd9adde51782">
+<div class="cell code"
+colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:300}"
+id="UNL0WXav3hLj" outputId="706d6bfd-f938-4096-ac96-83441697c51e">
 
 ``` python
 ## First 5 records of G1 (student)
 df= pd.read_csv('https://raw.githubusercontent.com/prasertcbs/basic-dataset/master/Starbucks%20satisfactory%20survey%20encode%20cleaned.csv')
 df[(df['status']==0) & (df['membershipCard']==1)].head(5)
+```
+
+<div class="output execute_result" execution_count="21">
+
+        Id  gender  age  status  income  visitNo  method  timeSpend  location  \
+    3    4       1    1       0       0        3       2          0         2   
+    4    5       0    1       0       0        2       2          1         1   
+    5    6       1    1       0       0        3       0          1         2   
+    10  11       1    1       0       0        3       0          0         2   
+    11  12       1    1       0       0        3       0          1         2   
+
+        membershipCard  ...  chooseRate  promoMethodApp  promoMethodSoc  \
+    3                1  ...           3               1               1   
+    4                1  ...           3               1               1   
+    5                1  ...           4               1               1   
+    10               1  ...           4               1               1   
+    11               1  ...           4               1               1   
+
+        promoMethodEmail  promoMethodDeal  promoMethodFriend  promoMethodDisplay  \
+    3                  1                1                  1                   1   
+    4                  1                1                  1                   1   
+    5                  1                1                  1                   1   
+    10                 1                1                  1                   1   
+    11                 1                1                  1                   1   
+
+        promoMethodBillboard  promoMethodOthers  loyal  
+    3                      1                  1      1  
+    4                      1                  1      0  
+    5                      1                  1      0  
+    10                     1                  1      0  
+    11                     1                  1      1  
+
+    [5 rows x 33 columns]
+
 </div>
 
-<div class="cell code" execution_count="7"
-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:143}"
-id="dhe52HVB4T1O" outputId="740c1d2d-1a73-4578-d27b-289cf47ec0a6">
+</div>
+
+<div class="cell code"
+colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:300}"
+id="dhe52HVB4T1O" outputId="58c70309-4726-4dd5-9433-2b551bba2549">
 
 ``` python
 ## First 5 records of G2 (employed)
 df[(df['status']==2) & (df['membershipCard']==1)].head(5)
+```
+
+<div class="output execute_result" execution_count="22">
+
+        Id  gender  age  status  income  visitNo  method  timeSpend  location  \
+    9   10       0    1       2       0        2       2          0         2   
+    21  22       1    1       2       0        3       0          0         0   
+    22  23       0    1       2       1        3       0          4         0   
+    26  27       0    2       2       4        3       1          0         1   
+    32  33       1    2       2       1        3       2          0         2   
+
+        membershipCard  ...  chooseRate  promoMethodApp  promoMethodSoc  \
+    9                1  ...           4               1               1   
+    21               1  ...           5               1               1   
+    22               1  ...           3               1               1   
+    26               1  ...           2               1               1   
+    32               1  ...           5               1               1   
+
+        promoMethodEmail  promoMethodDeal  promoMethodFriend  promoMethodDisplay  \
+    9                  1                1                  1                   1   
+    21                 1                1                  1                   1   
+    22                 1                1                  1                   1   
+    26                 1                1                  1                   1   
+    32                 1                1                  1                   1   
+
+        promoMethodBillboard  promoMethodOthers  loyal  
+    9                      1                  1      0  
+    21                     1                  1      0  
+    22                     1                  1      1  
+    26                     1                  0      1  
+    32                     1                  1      0  
+
+    [5 rows x 33 columns]
+
+</div>
 
 </div>
 
 <div class="cell code" id="zEgfWXaKGvNC">
+
 
 ``` python
 ## Any other data description and visualization you want to add.
